@@ -7,40 +7,36 @@
 //
 
 #import "DetailViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface DetailViewController ()
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
 @implementation DetailViewController
 
-#pragma mark - Managing the detail item
-
-- (void)setDetailItem:(id)newDetailItem {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-            
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView {
-    // Update the user interface for the detail item.
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
-    }
-}
-
-- (void)viewDidLoad {
+-(void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    self.title = self.adventurer.name;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(Raid *)createRaid
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Raid"];
+    request.predicate = [NSPredicate predicateWithFormat:@"date equals %@", self.datePicker.date];
+
+    NSArray *results = [self.adventurer.managedObjectContext executeFetchRequest:request error:nil];
+
+    if(results.count > 0)
+    {
+        NSLog(@"This raid exists");
+        return results.firstObject;
+    }
+    Raid *raid = [NSEntityDescription insertNewObjectForEntityForName:@"Raid" inManagedObjectContext:self.adventurer.managedObjectContext];
+    raid.date = self.datePicker.date;
+    return raid;
 }
 
 @end

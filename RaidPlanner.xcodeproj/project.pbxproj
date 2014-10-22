@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4E24DC19F81D79001A0F91 /* Adventurer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E24DB19F81D79001A0F91 /* Adventurer.m */; };
+		4C4E24DF19F81D7A001A0F91 /* Raid.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E24DE19F81D7A001A0F91 /* Raid.m */; };
 		4C940BD719F8055200682F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C940BD619F8055200682F49 /* main.m */; };
 		4C940BDA19F8055200682F49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C940BD919F8055200682F49 /* AppDelegate.m */; };
 		4C940BDD19F8055200682F49 /* RaidPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C940BDB19F8055200682F49 /* RaidPlanner.xcdatamodeld */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4E24DA19F81D79001A0F91 /* Adventurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Adventurer.h; path = ../Adventurer.h; sourceTree = "<group>"; };
+		4C4E24DB19F81D79001A0F91 /* Adventurer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Adventurer.m; path = ../Adventurer.m; sourceTree = "<group>"; };
+		4C4E24DD19F81D7A001A0F91 /* Raid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Raid.h; path = ../Raid.h; sourceTree = "<group>"; };
+		4C4E24DE19F81D7A001A0F91 /* Raid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Raid.m; path = ../Raid.m; sourceTree = "<group>"; };
 		4C940BD119F8055200682F49 /* RaidPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaidPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C940BD519F8055200682F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C940BD619F8055200682F49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +102,10 @@
 				4C940BE719F8055200682F49 /* Images.xcassets */,
 				4C940BE919F8055200682F49 /* LaunchScreen.xib */,
 				4C940BDB19F8055200682F49 /* RaidPlanner.xcdatamodeld */,
+				4C4E24DD19F81D7A001A0F91 /* Raid.h */,
+				4C4E24DE19F81D7A001A0F91 /* Raid.m */,
+				4C4E24DA19F81D79001A0F91 /* Adventurer.h */,
+				4C4E24DB19F81D79001A0F91 /* Adventurer.m */,
 				4C940BD419F8055200682F49 /* Supporting Files */,
 			);
 			path = RaidPlanner;
@@ -228,10 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C940BE319F8055200682F49 /* DetailViewController.m in Sources */,
+				4C4E24DF19F81D7A001A0F91 /* Raid.m in Sources */,
 				4C940BE019F8055200682F49 /* MasterViewController.m in Sources */,
 				4C940BDA19F8055200682F49 /* AppDelegate.m in Sources */,
 				4C940BDD19F8055200682F49 /* RaidPlanner.xcdatamodeld in Sources */,
 				4C940BD719F8055200682F49 /* main.m in Sources */,
+				4C4E24DC19F81D79001A0F91 /* Adventurer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +434,7 @@
 				4C940BFC19F8055200682F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C940BFD19F8055200682F49 /* Build configuration list for PBXNativeTarget "RaidPlannerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +443,7 @@
 				4C940BFF19F8055200682F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
